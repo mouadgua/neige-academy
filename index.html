@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neige Academy — L'académie Rocket League francophone</title>
+<meta name="description" content="Neige Academy : coaching Rocket League personnalisé, analyse de replay, training packs et communauté compétitive. Du Diamant au Super Sonic Legend.">
+<meta name="theme-color" content="#05080F">
+<meta property="og:title" content="Neige Academy — L'académie Rocket League francophone">
+<meta property="og:description" content="Coaching personnalisé, analyse de replay, training packs et communauté compétitive.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 140'%3E%3Crect width='140' height='140' rx='34' fill='%230A1524'/%3E%3Cg stroke='%23bfe9fb' stroke-width='6' stroke-linecap='round' fill='none' transform='translate(70,70)'%3E%3Cg id='a'%3E%3Cpath d='M0 0V-52M0-52l-9 10M0-52l9 10M0-20l-10 10M0-20l10 10M0-36l-8 8M0-36l8 8'/%3E%3C/g%3E%3Cuse href='%23a' transform='rotate(60)'/%3E%3Cuse href='%23a' transform='rotate(120)'/%3E%3Cuse href='%23a' transform='rotate(180)'/%3E%3Cuse href='%23a' transform='rotate(240)'/%3E%3Cuse href='%23a' transform='rotate(300)'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ============ SVG SPRITE : logo + icônes (aucun emoji) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="frost" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7FD4F5"/>
+      <stop offset="38%"  stop-color="#CDEEFC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <!-- Le logo : flocon 6 branches (reproduction du logo du serveur), tracé unique -->
+    <path id="flake-path" d="M70 70L70 18M70 18L61 8M70 18L79 8M70 49L59.5 38.5M70 49L80.5 38.5M70 33L62 25M70 33L78 25M70 70L115.03 44M115.03 44L119.19 31.21M115.03 44L128.19 46.79M88.19 59.5L92.03 45.16M88.19 59.5L102.53 63.34M102.04 51.5L104.97 40.57M102.04 51.5L112.97 54.43M70 70L115.03 96M115.03 96L128.19 93.21M115.03 96L119.19 108.79M88.19 80.5L102.53 76.66M88.19 80.5L92.03 94.84M102.04 88.5L112.97 85.57M102.04 88.5L104.97 99.43M70 70L70 122M70 122L79 132M70 122L61 132M70 91L80.5 101.5M70 91L59.5 101.5M70 107L78 115M70 107L62 115M70 70L24.97 96M24.97 96L20.81 108.79M24.97 96L11.81 93.21M51.81 80.5L47.97 94.84M51.81 80.5L37.47 76.66M37.96 88.5L35.03 99.43M37.96 88.5L27.03 85.57M70 70L24.97 44M24.97 44L11.81 46.79M24.97 44L20.81 31.21M51.81 59.5L37.47 63.34M51.81 59.5L47.97 45.16M37.96 51.5L27.03 54.43M37.96 51.5L35.03 40.57"/>
+    <g id="flake"><use href="#flake-path" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+    <!-- Icônes (stroke, 24x24) -->
+    <g id="i-discord"><path d="M19.3 5.6A16.6 16.6 0 0 0 15.1 4.3l-.2.4a12.6 12.6 0 0 0-5.8 0l-.2-.4A16.6 16.6 0 0 0 4.7 5.6C2 9.6 1.3 13.6 1.7 17.5a16.7 16.7 0 0 0 5 2.5l1-1.7a10.8 10.8 0 0 1-1.7-.8l.4-.3a11.9 11.9 0 0 0 10.2 0l.4.3a10.8 10.8 0 0 1-1.7.8l1 1.7a16.7 16.7 0 0 0 5-2.5c.5-4.5-.6-8.5-2.9-11.9Z"/><circle cx="8.9" cy="13.4" r="1.6"/><circle cx="15.1" cy="13.4" r="1.6"/></g>
+    <g id="i-target"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></g>
+    <g id="i-mic"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3.5"/></g>
+    <g id="i-replay"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3 4.5V9h4.5"/><path d="M10.5 9.5v5l4.5-2.5Z"/></g>
+    <g id="i-chart"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M7.5 16.5 11 11l3.2 3 4-6.5"/><circle cx="11" cy="11" r="1.1"/><circle cx="14.2" cy="14" r="1.1"/></g>
+    <g id="i-users"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.4 6.4 0 0 1 12.4 0"/><path d="M16 5.2a3.4 3.4 0 0 1 0 6.6"/><path d="M17.6 14.6A6.4 6.4 0 0 1 21.2 20"/></g>
+    <g id="i-gift"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 13.5h18"/><path d="M12 9v12"/><path d="M12 9S9.6 4 7.4 4a2.3 2.3 0 0 0 0 5"/><path d="M12 9s2.4-5 4.6-5a2.3 2.3 0 0 1 0 5"/></g>
+    <g id="i-ticket"><path d="M3 8.5V6.2A1.2 1.2 0 0 1 4.2 5h15.6A1.2 1.2 0 0 1 21 6.2v2.3a3.5 3.5 0 0 0 0 7v2.3a1.2 1.2 0 0 1-1.2 1.2H4.2A1.2 1.2 0 0 1 3 17.8v-2.3a3.5 3.5 0 0 0 0-7Z"/><path d="M14 6.5v3M14 14.5v3"/></g>
+    <g id="i-bolt"><path d="M13.2 2.5 4.8 13.4h6L10.8 21.5 19.2 10.6h-6Z"/></g>
+    <g id="i-arrow"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></g>
+    <g id="i-plus"><path d="M12 5v14M5 12h14"/></g>
+    <g id="i-shield"><path d="M12 2.8 4.5 6v6c0 4.6 3.1 8 7.5 9.2 4.4-1.2 7.5-4.6 7.5-9.2V6Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></g>
+    <g id="i-clock"><circle cx="12" cy="12" r="9"/><path d="M12 6.8V12l3.4 2"/></g>
+    <g id="i-tiktok"><path d="M14 3.5v10.9a3.9 3.9 0 1 1-3.3-3.85"/><path d="M14 3.5a5.2 5.2 0 0 0 5.2 5.1"/></g>
+  </defs>
+</svg>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader__inner">
+    <svg class="loader__mark" viewBox="0 0 140 140" aria-hidden="true">
+      <use href="#flake" stroke="url(#frost)" stroke-width="5"/>
+    </svg>
+    <div class="loader__meta">
+      <span class="loader__word">NEIGE ACADEMY</span>
+      <span class="loader__pct" id="loaderPct">00</span>
+    </div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+  </div>
+</div>
+
+<!-- ============ DÉCOR GLOBAL ============ -->
+<canvas id="snow" class="snow" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" aria-hidden="true"><i id="scrollProgress"></i></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" data-magnetic aria-label="Neige Academy — accueil">
+    <svg class="nav__flake" viewBox="0 0 140 140" aria-hidden="true"><use href="#flake" stroke="url(#frost)" stroke-width="6"/></svg>
+    <span class="nav__word">Neige<em>Academy</em></span>
+  </a>
+  <nav class="nav__links" aria-label="Navigation principale">
+    <a href="#manifeste" data-nav>Manifeste</a>
+    <a href="#offre" data-nav>Le club</a>
+    <a href="#parcours" data-nav>Parcours</a>
+    <a href="#staff" data-nav>Staff</a>
+    <a href="#rangs" data-nav>Rangs</a>
+    <a href="#faq" data-nav>FAQ</a>
+  </nav>
+  <a class="btn btn--nav" href="https://discord.gg/neigeacademy" target="_blank" rel="noopener" data-magnetic>
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-discord"/></svg>
+    <span>Rejoindre</span>
+  </a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__list">
+    <a href="#manifeste" data-nav><span>01</span>Manifeste</a>
+    <a href="#offre" data-nav><span>02</span>Le club</a>
+    <a href="#parcours" data-nav><span>03</span>Parcours</a>
+    <a href="#staff" data-nav><span>04</span>Staff</a>
+    <a href="#rangs" data-nav><span>05</span>Rangs</a>
+    <a href="#faq" data-nav><span>06</span>FAQ</a>
+  </nav>
+  <a class="btn btn--big" href="https://discord.gg/neigeacademy" target="_blank" rel="noopener">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-discord"/></svg><span>Rejoindre le Discord</span>
+  </a>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__grid">
+
+    <div class="hero__badge reveal" data-d="0">
+      <span class="pulse"></span> Serveur ouvert — coaching disponible
+    </div>
+
+    <h1 class="hero__title">
+      <span class="line"><span class="w" data-split>ACADÉMIE</span></span>
+      <span class="line line--offset">
+        <span class="hero__mark" aria-hidden="true">
+          <svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="7"/></svg>
+        </span>
+        <span class="w" data-split>ROCKET</span>
+      </span>
+      <span class="line line--right"><span class="w outline" data-split>LEAGUE</span></span>
+    </h1>
+
+    <p class="hero__lead reveal" data-d="1">
+      <strong>Neige Academy</strong> est le Discord francophone où des joueurs progressent
+      pour de vrai&nbsp;: coaching individuel en vocal, analyse de tes replays,
+      training packs sélectionnés et une communauté qui joue ensemble — du Diamant au SSL.
+    </p>
+
+    <div class="hero__cta reveal" data-d="2">
+      <a class="btn btn--solid" href="https://discord.gg/neigeacademy" target="_blank" rel="noopener" data-magnetic>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-discord"/></svg>
+        <span>Rejoindre le serveur</span>
+      </a>
+      <a class="btn btn--ghost" href="#offre" data-nav data-magnetic>
+        <span>Voir le coaching</span>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+
+    <aside class="hero__panel reveal" data-d="3" aria-label="Chiffres du serveur">
+      <div class="stat"><b class="count" data-to="14" data-suffix="">0</b><span>rangs représentés<br>D3 → SSL</span></div>
+      <div class="stat"><b class="count" data-to="5" data-suffix="">0</b><span>coachs actifs<br>sur le serveur</span></div>
+      <div class="stat"><b class="count" data-to="30" data-suffix="+">0</b><span>training packs<br>classés par thème</span></div>
+      <div class="stat"><b class="count" data-to="100" data-suffix="%">0</b><span>francophone<br>et gratuit à l'entrée</span></div>
+    </aside>
+
+    <div class="hero__scroll" aria-hidden="true"><span>SCROLL</span><i></i></div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>DIAMANT 3</span><i></i><span>CHAMPION 1</span><i></i><span>CHAMPION 2</span><i></i><span>CHAMPION 3</span><i></i><span>GRAND CHAMPION 1</span><i></i><span>GRAND CHAMPION 2</span><i></i><span>GRAND CHAMPION 3</span><i></i><span>SUPERSONIC LEGEND</span><i></i>
+      <span>DIAMANT 3</span><i></i><span>CHAMPION 1</span><i></i><span>CHAMPION 2</span><i></i><span>CHAMPION 3</span><i></i><span>GRAND CHAMPION 1</span><i></i><span>GRAND CHAMPION 2</span><i></i><span>GRAND CHAMPION 3</span><i></i><span>SUPERSONIC LEGEND</span><i></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTE (texte révélé au scroll) ============ -->
+<section class="manifesto" id="manifeste">
+  <div class="manifesto__sticky">
+    <span class="eyebrow"><i></i>01 — Manifeste</span>
+    <p class="manifesto__text" data-scrolltext>
+      On ne monte pas de rang en jouant plus. On monte en comprenant ce qu'on rate.
+      Ici, un coach regarde ton replay, te dit exactement quoi corriger,
+      et te donne la routine pour que ça rentre. Pas de recette magique&nbsp;:
+      du travail ciblé, mesuré, répété — avec des gens qui progressent en même temps que toi.
+    </p>
+    <div class="manifesto__sign">
+      <svg class="manifesto__flake" viewBox="0 0 140 140" aria-hidden="true"><use href="#flake" stroke="url(#frost)" stroke-width="5"/></svg>
+      <span>Neige — fondateur</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LE CLUB / BENTO ============ -->
+<section class="club" id="offre">
+  <header class="sec-head">
+    <span class="eyebrow"><i></i>02 — Le club</span>
+    <h2 class="sec-title" data-split-lines>Six façons de <em>progresser</em> ici</h2>
+    <p class="sec-sub">Chaque salon du serveur a un rôle précis. Voilà la carte.</p>
+  </header>
+
+  <div class="bento">
+    <article class="cell cell--xl" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-ticket"/></svg><span class="cell__tag">#demande-coaching</span></div>
+      <h3>Coaching individuel<br>sur ticket</h3>
+      <p>Tu ouvres un ticket, tu décris ton rang et ton problème. Un coach te prend en vocal, écran partagé, et travaille <em>ton</em> jeu — rotations, kickoffs, mécaniques, mental. Un salon <b>#GC3-SSL</b> dédié existe pour le haut niveau.</p>
+      <ul class="chips"><li>1 vs 1 en vocal</li><li>écran partagé</li><li>plan d'entraînement</li></ul>
+    </article>
+
+    <article class="cell" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-replay"/></svg><span class="cell__tag">#feedback</span></div>
+      <h3>Analyse de replay</h3>
+      <p>On repasse tes matchs image par image. Tu ressors avec 3 erreurs nommées, pas 30 conseils vagues.</p>
+    </article>
+
+    <article class="cell" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-mic"/></svg><span class="cell__tag">Coaching Libre</span></div>
+      <h3>Vocaux ouverts</h3>
+      <p>Deux salons <b>Coaching Libre</b> et un statut <b>coaching ouvert&nbsp;!</b>&nbsp;: quand un coach est dispo, tu rentres, c'est tout.</p>
+    </article>
+
+    <article class="cell cell--wide" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-target"/></svg><span class="cell__tag">#training-pack</span></div>
+      <h3>Training packs classés</h3>
+      <p>Une bibliothèque de codes rangés par objectif — double tap, aerial shots, ball control, redirects, kickoffs, airdribble, powershots, échauffements. Chaque pack a son objectif écrit noir sur blanc.</p>
+      <div class="codes">
+        <span><b>Double tap</b><code>CAFC-FB3E-3C0F-B8F1</code></span>
+        <span><b>Ball control</b><code>29EF-0FD3-D1DA-0373</code></span>
+        <span><b>Redirects</b><code>D714-38D7-6553-9FD3</code></span>
+      </div>
+    </article>
+
+    <article class="cell cell--sm" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-users"/></svg><span class="cell__tag">#recherche-ranked</span></div>
+      <h3>Trouve ton duo</h3>
+      <p>Le salon où l'on cherche un coéquipier à son rang pour le 2s et le 3s. Plus de solo queue subie.</p>
+    </article>
+
+    <article class="cell" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-chart"/></svg><span class="cell__tag">#progression</span></div>
+      <h3>Ta courbe</h3>
+      <p>On garde une trace de tes sessions pour voir la progression sur des semaines, pas sur un match.</p>
+    </article>
+
+    <article class="cell" data-spot data-tilt>
+      <div class="cell__top"><svg class="ic ic--lg" viewBox="0 0 24 24"><use href="#i-gift"/></svg><span class="cell__tag">#giveaways</span></div>
+      <h3>Coachings offerts</h3>
+      <p>Régulièrement, des sessions gratuites sont tirées au sort pour la communauté.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PARCOURS — scroll horizontal épinglé ============ -->
+<section class="journey" id="parcours">
+  <div class="journey__pin">
+    <div class="journey__head">
+      <span class="eyebrow"><i></i>03 — Parcours</span>
+      <h2 class="sec-title">De l'arrivée<br>à la <em>progression</em></h2>
+      <div class="journey__prog"><i id="journeyBar"></i></div>
+    </div>
+    <div class="journey__track" id="journeyTrack">
+      <article class="step">
+        <span class="step__n">01</span>
+        <h3>Tu rejoins</h3>
+        <p>Lis le <b>#règlement</b>, passe par <b>#rôles</b> et sélectionne ton rang actuel. Le serveur s'adapte à ton niveau immédiatement.</p>
+        <svg class="ic ic--xl" viewBox="0 0 24 24"><use href="#i-shield"/></svg>
+      </article>
+      <article class="step">
+        <span class="step__n">02</span>
+        <h3>Tu ouvres un ticket</h3>
+        <p>Un bouton dans <b>#demande-coaching</b>. Tu expliques ton rang, ta plateforme et ce qui te bloque. Le staff répond dans la foulée.</p>
+        <svg class="ic ic--xl" viewBox="0 0 24 24"><use href="#i-ticket"/></svg>
+      </article>
+      <article class="step">
+        <span class="step__n">03</span>
+        <h3>La session</h3>
+        <p>En vocal, avec ton coach. Replay analysé, erreurs identifiées, corrections testées en direct dans le training.</p>
+        <svg class="ic ic--xl" viewBox="0 0 24 24"><use href="#i-mic"/></svg>
+      </article>
+      <article class="step">
+        <span class="step__n">04</span>
+        <h3>Ta routine</h3>
+        <p>Tu repars avec des packs précis et une routine d'échauffement. C'est ce que tu fais entre deux sessions qui fait le rang.</p>
+        <svg class="ic ic--xl" viewBox="0 0 24 24"><use href="#i-target"/></svg>
+      </article>
+      <article class="step">
+        <span class="step__n">05</span>
+        <h3>Tu reviens</h3>
+        <p>Nouveau replay, on mesure. <b>#progression</b> garde la trace, <b>#feedback</b> garde la parole. Et on recommence, plus haut.</p>
+        <svg class="ic ic--xl" viewBox="0 0 24 24"><use href="#i-chart"/></svg>
+      </article>
+      <article class="step step--cta">
+        <span class="step__n">→</span>
+        <h3>À toi.</h3>
+        <p>L'entrée est gratuite. Le premier ticket prend deux minutes.</p>
+        <a class="btn btn--solid" href="https://discord.gg/neigeacademy" target="_blank" rel="noopener" data-magnetic>
+          <svg class="ic" viewBox="0 0 24 24"><use href="#i-discord"/></svg><span>Rejoindre</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAFF ============ -->
+<section class="staff" id="staff">
+  <header class="sec-head sec-head--split">
+    <div>
+      <span class="eyebrow"><i></i>04 — Staff</span>
+      <h2 class="sec-title" data-split-lines>Les gens<br>derrière <em>l'académie</em></h2>
+    </div>
+    <p class="sec-sub">Des joueurs haut niveau qui coachent parce qu'ils aiment expliquer. Pas des vendeurs de méthode.</p>
+  </header>
+
+  <div class="staff__list">
+    <article class="coach" data-coach data-tilt>
+      <div class="coach__id"><span class="coach__idx">01</span><h3>Neige</h3><span class="coach__role">Fondateur · Head coach</span></div>
+      <p class="coach__desc">À l'origine du serveur et de la formule de coaching. Vision de jeu, structure d'équipe et suivi long terme.</p>
+      <div class="coach__tags"><span>Vision de jeu</span><span>Rotations</span><span>Suivi</span></div>
+      <div class="coach__viz" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="4"/></svg></div>
+    </article>
+
+    <article class="coach" data-coach data-tilt>
+      <div class="coach__id"><span class="coach__idx">02</span><h3>xenlande</h3><span class="coach__role">Coach mécaniques</span></div>
+      <p class="coach__desc">« Explique super bien, en détail, et donne de bons conseils pour s'améliorer. » — retour de #feedback</p>
+      <div class="coach__tags"><span>Aerials</span><span>Dribble</span><span>Training</span></div>
+      <div class="coach__viz" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="4"/></svg></div>
+    </article>
+
+    <article class="coach" data-coach data-tilt>
+      <div class="coach__id"><span class="coach__idx">03</span><h3>Grand Amiral Darki</h3><span class="coach__role">Coach jeu d'équipe</span></div>
+      <p class="coach__desc">« Coaching avec de l'humour, ils expliquent clairement en donnant pas mal d'astuces et des routines. » — retour de #feedback</p>
+      <div class="coach__tags"><span>Rotations</span><span>Kickoffs</span><span>Routines</span></div>
+      <div class="coach__viz" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="4"/></svg></div>
+    </article>
+
+    <article class="coach" data-coach data-tilt>
+      <div class="coach__id"><span class="coach__idx">04</span><h3>coach vache</h3><span class="coach__role">Coach fondamentaux</span></div>
+      <p class="coach__desc">Patience et pédagogie sur les bases : touche de balle, positionnement, gestion du boost.</p>
+      <div class="coach__tags"><span>Fondamentaux</span><span>Boost</span><span>Placement</span></div>
+      <div class="coach__viz" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="4"/></svg></div>
+    </article>
+
+    <article class="coach" data-coach data-tilt>
+      <div class="coach__id"><span class="coach__idx">05</span><h3>Dharaa</h3><span class="coach__role">Coach · mental & régularité</span></div>
+      <p class="coach__desc">« Gentille, calme et patiente. M'a aidé à trouver mes erreurs peu importe le temps que ça prendrait. » — retour de #feedback</p>
+      <div class="coach__tags"><span>Mental</span><span>Tilt</span><span>Constance</span></div>
+      <div class="coach__viz" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="4"/></svg></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ RANGS ============ -->
+<section class="ranks" id="rangs">
+  <header class="sec-head">
+    <span class="eyebrow"><i></i>05 — Rangs</span>
+    <h2 class="sec-title" data-split-lines>Tout le monde<br>a sa <em>marche</em></h2>
+    <p class="sec-sub">Le serveur est structuré par rang. Tu joues, tu apprends et tu t'entraînes avec des gens à ton niveau — et juste au-dessus.</p>
+  </header>
+
+  <ol class="ladder" data-ladder>
+    <li style="--p:.30"><span class="ladder__name">Diamant 3</span><i class="ladder__bar"></i><span class="ladder__note">On construit les bases</span></li>
+    <li style="--p:.42"><span class="ladder__name">Champion 1</span><i class="ladder__bar"></i><span class="ladder__note">Rotations propres</span></li>
+    <li style="--p:.52"><span class="ladder__name">Champion 2</span><i class="ladder__bar"></i><span class="ladder__note">Lecture de la 2e balle</span></li>
+    <li style="--p:.62"><span class="ladder__name">Champion 3</span><i class="ladder__bar"></i><span class="ladder__note">Pression et 50/50</span></li>
+    <li style="--p:.74"><span class="ladder__name">Grand Champion 1</span><i class="ladder__bar"></i><span class="ladder__note">Décision sous pression</span></li>
+    <li style="--p:.84"><span class="ladder__name">Grand Champion 2</span><i class="ladder__bar"></i><span class="ladder__note">Mécaniques sous stress</span></li>
+    <li style="--p:.93"><span class="ladder__name">Grand Champion 3</span><i class="ladder__bar"></i><span class="ladder__note">Salon dédié #GC3-SSL</span></li>
+    <li style="--p:1"><span class="ladder__name">Supersonic Legend</span><i class="ladder__bar"></i><span class="ladder__note">Le plafond — pour l'instant</span></li>
+  </ol>
+</section>
+
+<!-- ============ TÉMOIGNAGES ============ -->
+<section class="voices" aria-label="Retours de la communauté">
+  <div class="voices__head"><span class="eyebrow"><i></i>Retours du salon #feedback</span></div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <blockquote>« Très bon coaching, merci beaucoup de tes conseils, je prends compte de mes erreurs et m'entraîne. »<cite>Teraxxx</cite></blockquote>
+      <blockquote>« Bon coach à recommander, explique bien la rota et la vision de jeu. »<cite>duty</cite></blockquote>
+      <blockquote>« Vraiment bon coaching avec de l'humour, ils expliquent clairement, pas mal d'astuces et des routines. »<cite>batman</cite></blockquote>
+      <blockquote>« Très claires, très sympa, très sérieux et très instructif. »<cite>Azerty</cite></blockquote>
+      <blockquote>« M'a aidé à trouver mes erreurs, peu importe le temps que ça prendrait. »<cite>Dze</cite></blockquote>
+      <blockquote>« Très bon coach, super sympa, explique super bien en détail. »<cite>membre du serveur</cite></blockquote>
+    </div>
+    <div class="marquee__track" aria-hidden="true">
+      <blockquote>« Très bon coaching, merci beaucoup de tes conseils, je prends compte de mes erreurs et m'entraîne. »<cite>Teraxxx</cite></blockquote>
+      <blockquote>« Bon coach à recommander, explique bien la rota et la vision de jeu. »<cite>duty</cite></blockquote>
+      <blockquote>« Vraiment bon coaching avec de l'humour, ils expliquent clairement, pas mal d'astuces et des routines. »<cite>batman</cite></blockquote>
+      <blockquote>« Très claires, très sympa, très sérieux et très instructif. »<cite>Azerty</cite></blockquote>
+      <blockquote>« M'a aidé à trouver mes erreurs, peu importe le temps que ça prendrait. »<cite>Dze</cite></blockquote>
+      <blockquote>« Très bon coach, super sympa, explique super bien en détail. »<cite>membre du serveur</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <header class="sec-head sec-head--split">
+    <div>
+      <span class="eyebrow"><i></i>06 — FAQ</span>
+      <h2 class="sec-title" data-split-lines>Les questions<br>qui reviennent</h2>
+    </div>
+  </header>
+
+  <div class="acc">
+    <details class="acc__item"><summary><span>Faut-il payer pour entrer&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>Non. Le serveur, les salons communautaires, les training packs et la recherche de joueurs sont gratuits. Les modalités du coaching individuel sont détaillées dans le salon <b>#formule-coaching</b>, et des sessions sont régulièrement offertes via <b>#giveaways</b>.</p></div>
+    </details>
+    <details class="acc__item"><summary><span>Je suis bas rang, c'est un problème&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>Au contraire — c'est là que les progrès sont les plus rapides. Les rôles vont du Diamant au Supersonic Legend, et les coachs adaptent totalement la session au niveau. Un salon <b>#GC3-SSL</b> existe séparément pour le très haut niveau.</p></div>
+    </details>
+    <details class="acc__item"><summary><span>Comment se passe une session&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>En vocal sur le Discord, généralement avec écran partagé. On regarde un replay récent, on isole les erreurs qui te coûtent le plus de buts, puis on va tester les corrections dans le training. Tu repars avec des packs et une routine.</p></div>
+    </details>
+    <details class="acc__item"><summary><span>Sur quelles plateformes&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>PC, PlayStation, Xbox et Switch — Rocket League est cross-platform. Il te faut juste un micro et de quoi partager un replay.</p></div>
+    </details>
+    <details class="acc__item"><summary><span>Combien de temps pour voir une différence&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>Sur les mécaniques, quelques séances de training suffisent. Sur la vision de jeu et les rotations, compte plusieurs semaines de jeu conscient. C'est pour ça que <b>#progression</b> existe : mesurer sur la durée, pas sur un match.</p></div>
+    </details>
+    <details class="acc__item"><summary><span>Je peux juste venir jouer&nbsp;?</span><i class="acc__ic"><svg viewBox="0 0 24 24"><use href="#i-plus"/></svg></i></summary>
+      <div class="acc__body"><p>Oui. <b>#recherche-ranked</b> pour trouver un duo, les vocaux <b>Taverne</b> et <b>Chill</b> pour jouer sans prise de tête, <b>#vos-clip</b> pour poster tes actions. Le coaching est là quand tu en veux, pas imposé.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <div class="final__flake" aria-hidden="true"><svg viewBox="0 0 140 140"><use href="#flake" stroke="url(#frost)" stroke-width="2.2"/></svg></div>
+  <h2 class="final__title">
+    <span class="line"><span class="w" data-split>PRÊT À</span></span>
+    <span class="line line--right"><span class="w outline" data-split>MONTER ?</span></span>
+  </h2>
+  <p class="final__lead reveal">Le prochain rang ne viendra pas tout seul. Le serveur est ouvert, les coachs aussi.</p>
+  <a class="btn btn--solid btn--big" href="https://discord.gg/neigeacademy" target="_blank" rel="noopener" data-magnetic>
+    <svg class="ic" viewBox="0 0 24 24"><use href="#i-discord"/></svg><span>Rejoindre Neige Academy</span>
+  </a>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="foot__brand">
+    <svg class="foot__flake" viewBox="0 0 140 140" aria-hidden="true"><use href="#flake" stroke="url(#frost)" stroke-width="6"/></svg>
+    <div><b>Neige Academy</b><span>Académie Rocket League francophone</span></div>
+  </div>
+  <nav class="foot__nav" aria-label="Liens de pied de page">
+    <a href="#offre" data-nav>Le club</a>
+    <a href="#parcours" data-nav>Parcours</a>
+    <a href="#staff" data-nav>Staff</a>
+    <a href="#faq" data-nav>FAQ</a>
+  </nav>
+  <div class="foot__social">
+    <a href="https://discord.gg/neigeacademy" target="_blank" rel="noopener" aria-label="Discord" data-magnetic><svg class="ic" viewBox="0 0 24 24"><use href="#i-discord"/></svg></a>
+    <a href="#" aria-label="TikTok" data-magnetic><svg class="ic" viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
+  </div>
+  <p class="foot__legal"><span>© <span id="year">2026</span> Neige Academy</span><span>Non affilié à Psyonix / Epic Games</span></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
